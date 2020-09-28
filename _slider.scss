@@ -1,0 +1,373 @@
+/* Browser Resets */
+
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+    outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexslider a img {
+    outline: none;
+    border: none;
+}
+
+.flexslider {
+    margin: 0 auto;
+    padding: 0 !important;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flexslider .slides>li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position:relative;
+
+    & .boldText {
+        font-weight: bold;
+        font-size: 110%;
+    }
+    & .highlightedText {
+        background-color: rgba(255, 255, 255, .3);
+        border-radius: 30px;
+        padding: 5px 10px 10px 10px;
+    }
+}
+
+/*temporary CSS*/
+
+.flexslider li .meta {
+    position: absolute;
+    top: 80px;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+}
+
+
+
+.flexslider li h2 {
+    color: $color-white;
+    font-size: $font-size--sliderText;
+    text-align: left;
+    text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
+
+
+.flexslider li p {
+
+    color: $color-white;
+        font-size: $font-size--headerText;
+        line-height: $text-line-height--large;
+        width: 700px;
+    text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+
+
+
+
+.flexslider li h2,.flexslider li p
+{
+
+    animation-duration: .8s;
+
+    animation-fill-mode: both;
+
+    animation-name: fadeOutDown;
+}
+
+
+.flexslider li.flex-active-slide .meta h2,
+.flexslider li.flex-active-slide .meta p {
+
+    animation-delay: 1s;
+
+    animation-duration: 1s;
+
+    animation-fill-mode: both;
+
+    animation-name: fadeInDown;
+}
+
+.flexslider li.flex-active-slide .meta h2,.flexslider li.flex-active-slide .meta p {
+
+    animation-delay: 1s;
+}
+
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-40px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+ @keyframes fadeOutDown {
+    0% {
+       opacity: 1;
+       transform: translateY(-40px);
+    }
+    100% {
+       opacity: 0;
+       transform: translateY(0);
+    }
+ }
+
+@keyframes fadeInLeft {
+    0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+    }
+}
+
+
+
+@keyframes fadeOutLeft {
+    0% {
+            opacity: 1;
+    }
+    100% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    }
+}
+
+
+li.grow {
+    background: url(../images/sliderImages/Grow.png) no-repeat;
+    min-height:500px;
+    display:inline-block;
+    /* You must set a specified height */
+    background-position:100% 100%;
+    /* Center the image */
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+li.connect {
+    background: url(../images/sliderImages/Connect.png) no-repeat;
+    display:inline-block;
+    min-height:500px;
+    width:1024px;
+    /* You must set a specified height */
+    background-position:100% 100%;
+    /* Center the image */
+
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+li.trust {
+    background: url(../images/sliderImages/Trust.png) no-repeat;
+    display:inline-block;
+    min-height:500px;
+    /* You must set a specified height */
+    background-position:100% 100%;
+    /* Center the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+
+}
+
+li.enjoy {
+    background: url(../images/sliderImages/Enjoy.png) no-repeat;
+    min-height:500px;
+    /* You must set a specified height */
+    background-position: 40% 0;
+    /* Center the image */
+
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+li.lifeBloodSlide {
+    background: url(../images/sliderImages/LifebloodBG.png) no-repeat;
+    min-height:500px;
+    width:1024px;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+/* Clearfix for the .slides element */
+
+.slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns] .slides {
+    display: block;
+}
+
+* html .slides {
+    height: 1%;
+}
+
+/* Theme Styles */
+
+.flexslider {
+    position: relative;
+    zoom: 1;
+    padding: 10px;
+    background: $color-white;
+    width: 100%;
+}
+
+/* Edit it if you want */
+
+.flex-container {
+    height: 500px;
+    margin-top: 100px;
+}
+
+.flexslider .slides {
+    zoom: 1;
+    position: relative;
+}
+
+/* Direction Nav */
+
+.flex-direction-nav a {
+    display: block;
+    position: absolute;
+    margin: -17px 0 0 0;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    cursor: pointer;
+    text-indent: -9999px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: $color-white;
+    background-image: linear-gradient($color-white,$color-grey);
+    @include box-shadow;
+}
+
+.flex-direction-nav a:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 13px;
+    top: 20px;
+    left: 15px;
+    background: url(../images/icons/arrows.png) no-repeat;
+}
+
+.flex-direction-nav a:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    top: 35px;
+}
+
+.flex-direction-nav .flex-next {
+    right: -5px;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.flex-direction-nav .flex-prev {
+    left: -5px;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.flex-direction-nav .flex-next:before {
+    background-position: -9px 0;
+    left: 15px;
+}
+
+.flex-direction-nav .flex-prev:before {
+    background-position: 0 0;
+}
+
+.flex-direction-nav .flex-next:after {
+    right: 0;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $color-grey;
+}
+
+.flex-direction-nav .flex-prev:after {
+    left: 0;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $color-grey;
+}
+
+/* Control Nav */
+
+.flexslider .flex-control-nav {
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ margin-top:40px;
+}
+
+.flex-control-nav li {
+    display: inline-block;
+    zoom: 1;
+}
+
+.flex-control-paging li a {
+    display: block;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px 0 8px;
+    background-color: $color-grey;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+
+.flex-control-paging li a.flex-active {
+    background-color: $color-blue;
+}
+
+/*text animation*/
+
+.clone h2 {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}

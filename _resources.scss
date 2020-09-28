@@ -1,0 +1,442 @@
+@media (min-width: 1024px){
+    .what-others-think {
+        & h2{
+            color:$color-orange;
+            margin:0 0 2em 0;
+        }
+
+        & .blockquote-container{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            flex-wrap:wrap;
+            align-items:center;
+
+
+            & .cite-container{
+              text-align:center;
+              margin-top:30px;
+              padding-right:15px;
+
+            }
+            & h4{
+                color:$color-orange;
+                text-align:center;
+            }
+
+            & h4:last-child{
+                color:$color-blue;
+                text-align:center;
+            }
+        & blockquote {
+
+            background-color: $color-grey;
+            margin: 10px 20px 0 20px;
+            min-height: 300px;
+            width:350px;
+            position: relative;
+            padding:15px;
+            @include rounded(10px);
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: 20px solid transparent;
+                border-top-color: $color-grey;
+                border-bottom: 0;
+                margin-left: -20px;
+                margin-bottom: -20px;
+            }
+            & p {
+                color: $color-white;
+               padding:10px 15px 0 15px;
+
+            }
+
+        }
+    }
+    }
+
+    .did-you-know {
+        background: url(../images/backgrounds/OfficeIcons.png) no-repeat;
+        height: 500px;
+        max-width:100%;
+        background-size: cover;
+        background-position: 0 50%;
+        padding:100px;
+        & h2 {
+            color: $color-white;
+            text-align:left;
+        }
+        & aside{
+            color:$color-white;
+            width:40%;
+            margin:40px 0 0 150px;
+        }
+    }
+
+    .learn-more-industry {
+        margin:50px 0 50px 0;
+
+
+        & article{
+            background-color:lighten($color-orange,10%);
+            @include rounded (15px);
+            color:$color-white;
+            margin:0 10px 20px 10px;
+            text-align:center;
+            padding:25px;
+            min-height:300px;
+            width:350px;
+            transition:all .5s ease-in;
+            &:hover{
+        background-color:$color-orange;
+        transform: scale(1.15);
+         cursor:pointer;
+
+            }
+        }
+        .button-container {
+            margin-top: 25px;
+            & button.submit {
+                text-transform: uppercase;
+                display: block;
+                margin: 0 auto;
+                color: $color-white;
+                background-color: $color-blue;
+                @include rounded (10px);
+                padding: 15px;
+                box-shadow: none;
+                border: none;
+                width: 150px;
+                cursor: pointer;
+                transition: background-color 1s ease-in-out;
+                &:hover {
+                    background-color: darken($color-blue, 25%)
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.Resources-Banner {
+    background: url(../images/backgrounds/Resources.png) no-repeat;
+    height: 600px;
+    background-size: cover;
+    background-position: 0 0;
+
+}
+
+
+
+
+
+.learn-more-industry {
+    margin:50px 0 50px 0;
+
+
+    & article{
+        background-color:lighten($color-orange,10%);
+        @include rounded (15px);
+        color:$color-white;
+        margin:0 10px 20px 10px;
+        text-align:center;
+        padding:25px;
+        min-height:300px;
+        width:350px;
+        transition:all .5s ease-in;
+        &:hover{
+    background-color:$color-orange;
+    transform: scale(1.15);
+     cursor:pointer;
+
+        }
+    }
+    .button-container {
+        margin-top: 25px;
+        & button.submit {
+            text-transform: uppercase;
+            display: block;
+            margin: 0 auto;
+            color: $color-white;
+            background-color: $color-blue;
+            @include rounded (10px);
+            padding: 15px;
+            box-shadow: none;
+            border: none;
+            width: 150px;
+            cursor: pointer;
+            transition: background-color 1s ease-in-out;
+            &:hover {
+                background-color: darken($color-blue, 25%)
+            }
+
+        }
+
+    }
+
+}
+
+/*tablet*/
+@media (min-width: 640px) and (max-width: 1024px) {
+    .did-you-know {
+        background: url(../images/backgrounds/OfficeIcons.png) no-repeat;
+        height: auto;
+        background-size: cover;
+        background-position: 0 20%;
+        padding:0 0 50px 0;
+        & h2 {
+            color: $color-white;
+            text-align:left;
+        }
+        & aside{
+            color:$color-white;
+            width:40%;
+            margin:40px 0 0 150px;
+        }
+    }
+    .what-others-think {
+        & h2{
+            color:$color-orange;
+            margin:0 0 2em 0;
+        }
+
+        & .blockquote-container{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+
+            & .cite-container{
+              text-align:center;
+              margin-top:30px;
+              padding-right:15px;
+
+            }
+            & h4{
+                color:$color-orange;
+                text-align:center;
+            }
+
+            & h4:last-child{
+                color:$color-blue;
+                text-align:center;
+            }
+        & blockquote {
+            background-color: $color-grey;
+            margin: 0 20px 0 20px;
+            min-height: 400px;
+            width:350px;
+            position: relative;
+            @include rounded(10px);
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: 20px solid transparent;
+                border-top-color: $color-grey;
+                border-bottom: 0;
+                margin-left: -20px;
+                margin-bottom: -20px;
+            }
+            & p {
+                color: $color-white;
+               padding:10px 15px 0 15px;
+
+            }
+
+        }
+    }
+    }
+
+
+
+    .learn-more-industry {
+        margin:50px 0 50px 0;
+
+
+        & article{
+            background-color:lighten($color-orange,10%);
+            @include rounded (15px);
+            color:$color-white;
+            margin:0 10px 20px 10px;
+            text-align:center;
+            padding:25px;
+            width:350px;
+            transition:all .5s ease-in;
+            &:hover{
+        background-color:$color-orange;
+        transform: scale(1.15);
+         cursor:pointer;
+
+            }
+        }
+        .button-container {
+            margin-top: 25px;
+            & button.submit {
+                text-transform: uppercase;
+                display: block;
+                margin: 0 auto;
+                color: $color-white;
+                background-color: $color-blue;
+                @include rounded (10px);
+                padding: 15px;
+                box-shadow: none;
+                border: none;
+                width: 150px;
+                cursor: pointer;
+                transition: background-color 1s ease-in-out;
+                &:hover {
+                    background-color: darken($color-blue, 25%)
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+}
+
+/*small devices*/
+@media (min-width:480px) and (max-width:639px){
+    .did-you-know {
+        background: url(../images/backgrounds/OfficeIcons.png) no-repeat;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        padding:0 0 50px 0;
+        & h2 {
+            color: $color-white;
+            text-align:left;
+        }
+        & aside{
+            color:$color-white;
+            width:40%;
+            margin:40px 0 0 150px;
+        }
+    }
+    .what-others-think {
+        & h2{
+            color:$color-orange;
+            margin:0 0 2em 0;
+        }
+
+        & .blockquote-container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+
+
+            & .cite-container{
+              text-align:center;
+              margin-top:30px;
+              padding-right:15px;
+
+            }
+            & h4{
+                color:$color-orange;
+                text-align:center;
+            }
+
+            & h4:last-child{
+                color:$color-blue;
+                text-align:center;
+            }
+        & blockquote {
+            background-color: $color-grey;
+            margin: 0 20px 0 20px;
+            min-height: 400px;
+            width:350px;
+            position: relative;
+            @include rounded(10px);
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: 20px solid transparent;
+                border-top-color: $color-grey;
+                border-bottom: 0;
+                margin-left: -20px;
+                margin-bottom: -20px;
+            }
+            & p {
+                color: $color-white;
+               padding:10px 15px 0 15px;
+
+            }
+
+        }
+    }
+    }
+
+
+
+    .learn-more-industry {
+        margin:50px 0 50px 0;
+
+
+        & article{
+            background-color:lighten($color-orange,10%);
+            @include rounded (15px);
+            color:$color-white;
+            margin:0 10px 20px 10px;
+            text-align:center;
+            padding:25px;
+            width:350px;
+            transition:all .5s ease-in;
+            &:hover{
+        background-color:$color-orange;
+        transform: scale(1.15);
+         cursor:pointer;
+
+            }
+        }
+        .button-container {
+            margin-top: 25px;
+            & button.submit {
+                text-transform: uppercase;
+                display: block;
+                margin: 0 auto;
+                color: $color-white;
+                background-color: $color-blue;
+                @include rounded (10px);
+                padding: 15px;
+                box-shadow: none;
+                border: none;
+                width: 150px;
+                cursor: pointer;
+                transition: background-color 1s ease-in-out;
+                &:hover {
+                    background-color: darken($color-blue, 25%)
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+

@@ -1,0 +1,265 @@
+/*mobile first*/
+@media (min-width:320px) and (max-width:639px){
+    .our-mission{
+    margin-top:50px;
+    & h2{
+        color:$color-grey;
+        margin-bottom:20px;
+        text-align:center;
+    }
+
+    & p{
+        color:$color-grey;
+    }
+}
+
+
+
+
+    .why-arden--list{
+    & p{
+        text-align:left;
+        margin-top:20px;
+        color:$color-grey;
+    }
+
+    & img{
+        margin:0 auto;
+        text-align:center;
+        display:block;
+    }
+
+    }
+
+    .content-container--icon{
+      display:flex;
+      justify-content:center;
+
+
+        & img{
+            margin:0 auto;
+            text-align:center;
+            display:block;
+
+
+
+        }
+
+    }
+
+
+
+    .content-container--our-motivation{
+        margin-top:20px;
+    }
+
+
+
+.value{
+    font-weight:weight(bold);
+    color:darken($color-grey,10%);
+    font-size:110%;
+}
+
+
+
+}
+
+/*tablet*/
+@media (min-width: 640px) and (max-width: 1023px){
+
+
+    .our-mission{
+    margin-top:50px;
+    & h2{
+        color:$color-grey;
+        margin-bottom:20px;
+        font-size:$font-size--medium;
+    }
+
+    & p{
+        color:$color-grey;
+    }
+}
+
+.why-Arden{
+    background:url('../images/backgrounds/Why-Arden.png');
+    background-repeat:no-repeat;
+    max-width:100%;
+    margin-bottom:3em;
+    background-attachment: fixed;
+    height:500px;
+
+    & h2{
+        color:$color-blue;
+        font-size:$font-size--medium;
+        padding:200px 0 0 200px;
+
+    }
+}
+
+
+    .why-arden--list{
+    & p{
+        text-align:left;
+        margin-top:20px;
+        color:$color-grey;
+    }
+
+    & img{
+        margin:0 auto;
+        text-align:center;
+        display:block;
+    }
+
+    }
+
+    .content-container--icon{
+        margin-bottom:10px;
+        & img{
+            margin:0 auto;
+            text-align:center;
+            display:block;
+
+
+        }
+
+    }
+
+    .content-container--our-motivation{
+        margin-top:20px;
+    }
+
+
+
+.value{
+    font-weight:weight(bold);
+    color:darken($color-grey,10%);
+    font-size:110%;
+}
+
+.why-Arden{
+    background:url('../images/backgrounds/Why-Arden.png');
+    background-repeat:no-repeat;
+    height:500px;
+    background-size:cover;
+    margin-bottom:3em;
+
+    & h2{
+        color:$color-orange;
+        font-size:$font-size--medium;
+        padding:100px 0 0 100px;
+        text-align:left;
+
+    }
+
+}
+
+}
+
+@media (min-width: 1024px){
+
+    .our-mission{
+        margin-top:50px;
+        & h2{
+            color:$color-grey;
+            margin-bottom:20px;
+            font-size:$font-size--medium;
+        }
+
+        & p{
+            color:$color-grey;
+        }
+    }
+
+    .why-Arden{
+        background:url('../images/backgrounds/Why-Arden.png');
+        background-repeat:no-repeat;
+        max-width:100%;
+        margin-bottom:3em;
+        background-attachment: fixed;
+        height:500px;
+
+        & h2{
+            color:$color-blue;
+            font-size:$font-size--medium;
+            padding:200px 0 0 200px;
+
+        }
+    }
+
+
+        .why-arden--list{
+        & p{
+            text-align:left;
+            margin-top:20px;
+            color:$color-grey;
+        }
+
+        & img{
+            margin:0 auto;
+            text-align:center;
+            display:block;
+        }
+
+        }
+
+        .content-container--icon{
+
+            &.ourMissionIcon{
+                margin-left:100px;
+
+            }
+            &.callCenterIcon{
+             margin-right:150px;
+
+            }
+            & img{
+                margin:0 auto;
+                text-align:center;
+                display:block;
+
+
+            }
+
+        }
+
+        .content-container--our-motivation{
+            padding-top:80px;
+            & h2{
+                margin-right:70px;
+            }
+        }
+
+        .content-container--our-mission-content{
+           padding-top:60px;
+           max-width:400px;
+        }
+
+
+
+    .value{
+        font-weight:weight(bold);
+        color:darken($color-grey,10%);
+        font-size:110%;
+    }
+
+    .why-Arden{
+        background:url('../images/backgrounds/Why-Arden.png');
+        background-repeat:no-repeat;
+        height:500px;
+        background-size:cover;
+        margin-bottom:3em;
+        background-position:50% 50%;
+
+        & h2{
+            color:$color-orange;
+            font-size:$font-size--large;
+            padding:100px 0 0 100px;
+            text-align:left;
+
+        }
+
+    }
+
+}

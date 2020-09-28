@@ -1,0 +1,74 @@
+//vars
+$color-orange:#d98f3e;
+$color-darkOrange:#c16b16;
+$color-grey:#a39c92;
+$color-light-grey:#efebe6;
+$color-blue:#3893D0;
+$color-green:#6ec065;
+$color-yellow:#e9b724;
+$color-white:#ffffff;
+$color-black:#000000;
+$color-red:#ff0000;
+$color-medium-blue:#3399CC;
+$color-dark-blue:#0084CE;
+$color-medium-grey:#706A64;
+$font-size--normal:1.5rem;
+$font-size--h3:1.75rem;
+$font-size--medium:2.75rem;
+$font-size--large:4rem;
+$font-size--small:.75rem;
+$font-size--sliderText:3rem;
+$font-size--headerText:1.75rem;
+$font-size--legendText:1.75rem;
+$text-line-height:1.5;
+$text-line-height--large:2.5;
+$footer-height:10em;
+$font-weights:(
+  "light":400,
+  "regular":500,
+  "bold":700
+);
+$width-small:400px;
+$width-medium:800px;
+$width-large:1200px;
+
+@mixin flexCenter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@function weight($weight_name){
+    @return map-get($font-weights,$weight-name)
+}
+
+
+@mixin box-shadow($x-axis: 0, $y-axis: 0, $blur: 20px, $color: rgba(0,0,0,.5)) {
+  box-shadow: $x-axis $y-axis $blur $color;
+}
+
+@mixin rounded($radius){
+    border-radius:$radius
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+
+

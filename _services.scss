@@ -1,0 +1,1063 @@
+/*small devices*/
+@media (min-width:320px) and (max-width:639px){
+
+.Services-Banner{
+    height: 500px;
+
+
+    &.Services-Banner--call-center-services{
+    background: url(../images/backgrounds/CallCenterServicesBanner.png) no-repeat;
+    background-size: cover;
+    background-position:50% 50%;
+
+    }
+    &.Services-Banner--management-services{
+    background: url(../images/backgrounds/ManagedServicesBanner.png) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    }
+}
+
+
+/*Generic styles*/
+
+#services-tabs{ width:100%;
+
+}
+
+/*Tab styles*/
+#content #services-tabs ul {
+margin:-75px 0 0 0 !important;
+padding:0 !important;
+display:flex;
+flex-direction:row;
+}
+
+#content #services-tabs ul li{
+background:$color-darkOrange;
+list-style-type:none;
+height:75px;
+margin:0 !important;
+padding-top:20px;
+}
+
+
+
+/*Tab link styles*/
+#content #services-tabs ul li a
+{text-align:center;
+font-size: 1.25em;
+text-decoration: none;
+color:lighten($color-orange,15%);
+margin-right:1em;
+
+}
+
+/*Active tab styles*/
+#content #services-tabs ul li.active {background:$color-orange;}
+#content #services-tabs ul li.active a { color:$color-white;}
+
+
+/*Tab content styles*/
+#content #services-tabs ul li{
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    padding:20px;
+    margin:0;
+}
+
+#content #services-tabs ul li:first-child{
+    margin-right:1em;
+}
+
+#content #services-tabs .tab-content{
+     background:$color-orange;
+     color:$color-white;
+     padding:2em;
+    }
+
+
+    /*initially hide call center and management service content*/
+    .management-services-content{
+        display:none;
+    }
+
+    /*services list*/
+    .InboundServicesList,.OutboundServicesList{
+      padding-left:100px;
+      font-size:$font-size--normal;
+
+    }
+
+    .services-info{
+
+        & h2{
+            color:$color-orange;
+        }
+    }
+
+    /*list images*/
+    .billing{
+       background: url(../images/icons/Billing.png);
+       list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+
+
+    }
+    .tech-support{
+        background: url(../images/icons/Tech-Support.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .sales{
+        background: url(../images/icons/Sales.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .customer-relations{
+        background: url(../images/icons/Customer-Relations.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .calling-leads{
+        background: url(../images/icons/Calling-Leads.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .emailing{
+        background: url(../images/icons/Emailing.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .live-chat{
+        background: url(../images/icons/Live-Chat.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .sms-texting{
+        background: url(../images/icons/SMS-Texting.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+
+     /*buttons*/
+     .button-container{
+        margin-top:25px;
+        text-align:center;
+        & a.inquiry{
+            text-transform:uppercase;
+            display:block;
+            margin:0 auto;
+            color:$color-white;
+            background-color:$color-blue;
+            @include rounded(10px);
+            padding:15px;
+            box-shadow:none;
+            border:none;
+            width:200px;
+            cursor:pointer;
+            transition:background-color 1s ease-in-out;
+            &:hover{
+                background-color:darken($color-blue,25%)
+            }
+        }
+
+
+    }
+
+
+    .service-inquiry-section{
+        margin:100px 0 100px 0;
+        & h2{
+            color:$color-orange;
+        }
+    }
+
+    .infographic{
+        margin:100px 0 100px 0;
+    }
+
+    .infographicContainer{
+    background:$color-light-grey;
+    width:80%;
+    padding:25px;
+    display:block;
+    margin:0 auto;
+    @include rounded(15px);
+
+    }
+
+    #content .infographic-info-block{
+        display: flex;
+        flex-direction: row;
+        max-width:100%;
+       justify-content:center;
+       flex-wrap:wrap;
+       flex-basis:70%;
+
+        & .infographic-info{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+
+
+          & .number{
+              font-size:3em;
+              font-family: secondaryFont;
+          }
+          & h3{
+              text-transform:uppercase;
+              font-size:1em;
+              white-space:nowrap;
+              font-family: secondaryFont;
+          }
+
+          &.infographic-info--discover{
+              color:$color-grey !important;
+              width:147px;
+              & ul{
+               margin-right:40px;
+            }
+
+          }
+          &.infographic-info--decision{
+            color:$color-blue !important;
+            width:147px;
+
+        }
+        &.infographic-info--setUp{
+            color:$color-green !important;
+            width:147px;
+            & ul{
+                margin-left:55px;
+
+            }
+
+               }
+
+        &.infographic-info--finalize{
+            color:$color-yellow !important;
+            width:147px;
+            & ul{
+                margin-left:55px;
+
+            }
+
+               }
+
+        &.infographic-info--enjoy{
+            color:$color-orange !important;
+            width:147px;
+            & ul{
+                margin-left:125px;
+
+            }
+
+               }
+            }
+        }
+
+
+    .management-services-content{
+        & h2{
+            color:$color-orange;
+            text-align:left;
+        }
+
+        & ul{
+            margin:0;
+
+
+            li{
+                list-style:none;
+                padding-bottom:10px;
+                margin:0;
+            }
+        }
+    }
+
+    .content-container-block--training{
+        flex:1;
+        width:50%;
+        margin-left:175px;
+
+    }
+
+    .content-container-block--engineering{
+       padding-top:100px;
+
+    }
+
+    .get-started{
+        margin:100px 0 100px 0;
+        padding:50px 0 50px 0;
+        background-image:
+    linear-gradient(
+      to right,
+      $color-orange, $color-yellow
+    );
+   & h2{
+       color:$color-white;
+   }
+   & img{
+       margin:0 auto;
+       display:block;
+
+   }
+   & .image-container{
+       margin:50px 0 50px 0;
+   }
+    }
+
+
+/*override default modal*/
+     .modal{
+         max-width:800px !important;
+         height:auto;
+         margin-top:30px;
+         background:transparent !important;
+         padding:0 !important;
+         & iframe{
+             min-width:800px;
+             min-height:500px;
+             margin:0;
+             padding:0;
+         }
+
+     }
+
+}
+
+//tablet
+@media (min-width: 640px) and (max-width: 1024px) {
+
+.Services-Banner{
+    height: 600px;
+    max-width:100%;
+
+
+    &.Services-Banner--call-center-services{
+    background: url(../images/backgrounds/CallCenterServicesBanner.png) no-repeat;
+    background-size:cover;
+    background-position: center;
+    max-width:100%;
+
+    }
+    &.Services-Banner--management-services{
+    background: url(../images/backgrounds/ManagedServicesBanner.png) no-repeat;
+    background-size:cover;
+    background-position: center;
+    max-width:100%;
+
+    }
+}
+
+
+/*Generic styles*/
+
+#services-tabs{ width:100%;
+
+}
+
+/*Tab styles*/
+#content #services-tabs ul {
+margin:-75px 0 0 0 !important;
+padding:0 !important;
+display:flex;
+flex-direction:row;
+}
+
+#content #services-tabs ul li{
+background:$color-darkOrange;
+list-style-type:none;
+height:75px;
+margin:0 !important;
+padding-top:20px;
+}
+
+
+
+/*Tab link styles*/
+#content #services-tabs ul li a
+{text-align:center;
+font-size: 1.25em;
+text-decoration: none;
+color:lighten($color-orange,15%);
+margin-right:1em;
+
+}
+
+/*Active tab styles*/
+#content #services-tabs ul li.active {background:$color-orange;}
+#content #services-tabs ul li.active a { color:$color-white;}
+
+
+/*Tab content styles*/
+#content #services-tabs ul li{
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    padding:20px;
+    margin:0;
+}
+
+#content #services-tabs ul li:first-child{
+    margin-right:1em;
+}
+
+#content #services-tabs .tab-content{
+     background:$color-orange;
+     color:$color-white;
+     padding:2em;
+    }
+
+
+    /*initially hide call center and management service content*/
+    .management-services-content{
+        display:none;
+    }
+
+    /*services list*/
+    .InboundServicesList,.OutboundServicesList{
+      padding-left:100px;
+      font-size:$font-size--normal;
+
+    }
+
+    .services-info{
+
+        & h2{
+            color:$color-orange;
+        }
+    }
+
+    /*list images*/
+    .billing{
+       background: url(../images/icons/Billing.png);
+       list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+
+
+    }
+    .tech-support{
+        background: url(../images/icons/Tech-Support.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .sales{
+        background: url(../images/icons/Sales.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .customer-relations{
+        background: url(../images/icons/Customer-Relations.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .calling-leads{
+        background: url(../images/icons/Calling-Leads.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .emailing{
+        background: url(../images/icons/Emailing.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .live-chat{
+        background: url(../images/icons/Live-Chat.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .sms-texting{
+        background: url(../images/icons/SMS-Texting.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+
+     /*buttons*/
+     .button-container{
+        margin-top:25px;
+        text-align:center;
+        & a.inquiry{
+            text-transform:uppercase;
+            display:block;
+            margin:0 auto;
+            color:$color-white;
+            background-color:$color-blue;
+            @include rounded(10px);
+            padding:15px;
+            box-shadow:none;
+            border:none;
+            width:200px;
+            cursor:pointer;
+            transition:background-color 1s ease-in-out;
+            &:hover{
+                background-color:darken($color-blue,25%)
+            }
+        }
+
+
+    }
+
+
+    .service-inquiry-section{
+        margin:100px 0 100px 0;
+        & h2{
+            color:$color-orange;
+        }
+    }
+
+    .infographic{
+        margin:100px 0 100px 0;
+    }
+
+    .infographicContainer{
+    background:$color-light-grey;
+    width:80%;
+    padding:25px;
+    display:block;
+    margin:0 auto;
+    @include rounded(15px);
+
+    }
+
+    #content .infographic-info-block{
+        display: flex;
+        flex-direction: row;
+        max-width:100%;
+       justify-content:center;
+       flex-wrap:wrap;
+
+
+        & .infographic-info{
+            display: flex;
+            flex-direction: column;
+           margin:0 10px 0 10px;
+
+          & .number{
+              font-size:3em;
+              font-family: secondaryFont;
+          }
+          & h3{
+              text-transform:uppercase;
+              font-size:1em;
+              white-space:nowrap;
+              font-family: secondaryFont;
+          }
+
+          &.infographic-info--discover{
+              color:$color-grey !important;
+              width:150px;
+
+
+          }
+          &.infographic-info--decision{
+            color:$color-blue !important;
+            width:150px;
+
+
+        }
+        &.infographic-info--setUp{
+            color:$color-green !important;
+            width:150px;
+
+
+               }
+
+        &.infographic-info--finalize{
+            color:$color-yellow !important;
+            width:150px;
+
+
+               }
+
+        &.infographic-info--enjoy{
+            color:$color-orange !important;
+            width:150px;
+
+
+               }
+            }
+        }
+
+
+    .management-services-content{
+        & h2{
+            color:$color-orange;
+            text-align:left;
+        }
+
+        & ul{
+            margin:0;
+
+
+            li{
+                list-style:none;
+                padding-bottom:10px;
+                margin:0;
+            }
+        }
+    }
+
+    .content-container-block--training{
+        flex:1;
+        width:50%;
+        margin-left:175px;
+
+    }
+
+    .get-started{
+        margin:100px 0 100px 0;
+        padding:50px 0 50px 0;
+        background-image:
+    linear-gradient(
+      to right,
+      $color-orange, $color-yellow
+    );
+   & h2{
+       color:$color-white;
+   }
+   & img{
+       margin:0 auto;
+       display:block;
+
+
+   }
+   & .image-container{
+       margin:50px 0 50px 0;
+   }
+    }
+
+
+/*override default modal*/
+     .modal{
+         max-width:800px !important;
+         height:auto;
+         margin-top:30px;
+         background:transparent !important;
+         padding:0 !important;
+         & iframe{
+             min-width:800px;
+             min-height:500px;
+             margin:0;
+             padding:0;
+         }
+
+     }
+
+}
+
+//desktop
+@media (min-width: 1024px){
+
+.Services-Banner{
+    height: 700px;
+
+
+    &.Services-Banner--call-center-services{
+    background: url(../images/backgrounds/CallCenterServicesBanner.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
+    &.Services-Banner--management-services{
+    background: url(../images/backgrounds/ManagedServicesBanner.png) no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+
+    }
+}
+
+
+/*Generic styles*/
+
+#services-tabs{ width:100%;
+
+}
+
+/*Tab styles*/
+#content #services-tabs ul {
+margin:-75px 0 0 0 !important;
+padding:0 !important;
+display:flex;
+flex-direction:row;
+}
+
+#content #services-tabs ul li{
+background:$color-darkOrange;
+list-style-type:none;
+height:75px;
+margin:0 !important;
+padding-top:20px;
+}
+
+
+
+/*Tab link styles*/
+#content #services-tabs ul li a
+{text-align:center;
+font-size: 1.25em;
+text-decoration: none;
+color:lighten($color-orange,15%);
+margin-right:1em;
+
+}
+
+/*Active tab styles*/
+#content #services-tabs ul li.active {background:$color-orange;}
+#content #services-tabs ul li.active a { color:$color-white;}
+
+
+/*Tab content styles*/
+#content #services-tabs ul li{
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    padding:20px;
+    margin:0;
+}
+
+#content #services-tabs ul li:first-child{
+    margin-right:1em;
+}
+
+#content #services-tabs .tab-content{
+     background:$color-orange;
+     color:$color-white;
+     padding:2em;
+    }
+
+
+    /*initially hide call center and management service content*/
+    .management-services-content{
+        display:none;
+    }
+
+    /*services list*/
+    .InboundServicesList,.OutboundServicesList{
+      padding-left:100px;
+      font-size:$font-size--normal;
+
+    }
+
+    .services-info{
+
+        & h2.outbound{
+            color:$color-orange;
+            min-width:450px;
+        }
+        & h2.inbound{
+            color:$color-orange;
+            min-width:450px;
+        }
+    }
+
+    /*list images*/
+    .billing{
+       background: url(../images/icons/Billing.png);
+       list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+
+
+    }
+    .tech-support{
+        background: url(../images/icons/Tech-Support.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .sales{
+        background: url(../images/icons/Sales.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .customer-relations{
+        background: url(../images/icons/Customer-Relations.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .calling-leads{
+        background: url(../images/icons/Calling-Leads.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .emailing{
+        background: url(../images/icons/Emailing.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .live-chat{
+        background: url(../images/icons/Live-Chat.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+     .sms-texting{
+        background: url(../images/icons/SMS-Texting.png);
+        list-style:none;
+       background-repeat:no-repeat;
+       background-position:0 50%;
+       padding-left:75px;
+       line-height:100px;
+     }
+
+     /*buttons*/
+     .button-container{
+        margin-top:25px;
+        text-align:center;
+        & a.inquiry{
+            text-transform:uppercase;
+            display:block;
+            margin:0 auto;
+            color:$color-white;
+            background-color:$color-blue;
+            @include rounded(10px);
+            padding:15px;
+            box-shadow:none;
+            border:none;
+            width:200px;
+            cursor:pointer;
+            transition:background-color 1s ease-in-out;
+            &:hover{
+                background-color:darken($color-blue,25%)
+            }
+        }
+
+
+    }
+
+
+    .service-inquiry-section{
+        margin:100px 0 100px 0;
+        & h2{
+            color:$color-orange;
+        }
+    }
+
+    .infographic{
+        margin:100px 0 100px 0;
+    }
+
+    .infographicContainer{
+    background:$color-light-grey;
+    padding:25px;
+    text-align:center;
+    margin:0 250px 0 250px;
+    @include rounded(15px);
+
+    }
+
+    #content .infographic-info-block{
+       display:flex;
+       justify-content:center;
+
+        & .infographic-info{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+
+
+
+          & .number{
+              font-size:3em;
+              font-family: secondaryFont;
+          }
+          & h3{
+              text-transform:uppercase;
+              font-size:1em;
+              white-space:nowrap;
+              font-family: secondaryFont;
+          }
+
+          &.infographic-info--discover{
+              color:$color-grey !important;
+
+
+          }
+          &.infographic-info--decision{
+            color:$color-blue !important;
+
+
+        }
+        &.infographic-info--setUp{
+            color:$color-green !important;
+
+
+               }
+
+        &.infographic-info--finalize{
+            color:$color-yellow !important;
+
+
+               }
+
+        &.infographic-info--enjoy{
+            color:$color-orange !important;
+
+
+               }
+            }
+        }
+
+
+    .management-services-content{
+        & h2{
+            color:$color-orange;
+            text-align:left;
+        }
+
+        & ul{
+            margin:0;
+
+
+            li{
+                list-style:none;
+                padding-bottom:10px;
+                margin:0;
+                font-size:$font-size--normal;
+            }
+        }
+    }
+
+    .content-container--icon-training{
+        margin-top:20px;
+
+    }
+
+    .content-container--icon-sales{
+margin-right:100px;
+
+    }
+
+    .content-container-block--training{
+        padding-top:75px;
+        flex:1;
+
+        margin-left:220px;
+
+
+    }
+
+    .content-container-block--engineering{
+       padding-top:50px;
+       flex:1;
+       width:50%;
+
+
+    }
+
+    .content-container--sales-marketing{
+       margin-right:100px;
+       padding-top:20px;
+
+    }
+
+    .get-started{
+        margin:100px 0 100px 0;
+        padding:50px 0 50px 0;
+        background-image:
+    linear-gradient(
+      to right,
+      $color-orange, $color-yellow
+    );
+   & h2{
+       color:$color-white;
+   }
+   & img{
+       margin:0 auto;
+       display:block;
+
+   }
+   & .image-container{
+       margin:50px 0 50px 0;
+   }
+    }
+
+
+/*override default modal*/
+     .modal{
+         max-width:800px !important;
+         height:auto;
+         margin-top:30px;
+         background:transparent !important;
+         padding:0 !important;
+         & iframe{
+             min-width:800px;
+             min-height:500px;
+             margin:0;
+             padding:0;
+         }
+
+     }
+    }
+
+
+
+
+

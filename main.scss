@@ -1,0 +1,656 @@
+@import 'config';
+@import 'normalize';
+@import 'nav';
+@import 'home';
+@import 'slider';
+@import 'aboutUs';
+@import 'forms';
+@import 'steps';
+@import 'portalLogin';
+@import 'resources';
+@import 'services';
+@import 'termsOfService';
+@import 'privacyPolicy';
+/*common styles across site*/
+
+@font-face {
+    font-family: primaryFont;
+    src: url('../fonts/Thonburi.ttc');
+}
+
+@font-face {
+    font-family: secondaryFont;
+    src: url('../fonts/Oswald-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    font-size:16px;
+    line-height: $text-line-height;
+    height: 100vw;
+    min-height: 100%;
+    font-family: primaryFont, sans-serif;
+    color: $color-grey;
+}
+
+.services-quote{
+    background-color:$color-blue;
+}
+/*small devices*/
+@media (min-width:320px) and (max-width:639px){
+    main{
+        min-height:800px;
+
+    }
+
+    .container {
+
+        & a.skip-to-content-link {
+            left: 50%;
+            position: absolute;
+            transform: translateY(-100%);
+            background: $color-orange;
+            height: 40px;
+            top:0;
+            z-index:50;
+            padding: 8px;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+            color: $color-white;
+        }
+        a.skip-to-content-link:focus {
+            transform: translateY(0%);
+            z-index:50000;
+        }
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+        color: $color-blue;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+        & a:hover {
+            color: lighten($color-orange, 10%);
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: $font-size--medium;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: $text-line-height + .25;
+    }
+
+    header {
+        z-index:10000;
+        position:fixed;
+        top:0;
+        transition:all 1s ease-in-out;
+        height:100px;
+        &.initial-header {
+            width: 100%;
+            padding: 1rem;
+            height: 100px;
+            background-color:$color-white;
+
+
+            & .logo-large {
+                position: relative;
+                left:0;
+                height: 65px;
+                width: 245px;
+                overflow: hidden;
+                margin: 0;
+                font-size:0;
+
+
+            }
+            .logo-large:after {
+                content: url(../images/Logo/Arden-Logo-large.svg);
+                max-width:100%;
+
+
+
+            }
+        }
+        &.scroll-header {
+            width: 100%;
+            padding: 1rem;
+            height:75px;
+            background-color:$color-white;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .5);
+            transition:1s all ease-in-out;
+            & .logo-small {
+                position:absolute;
+                left: 0;
+                top:0;
+                height: 48px;
+                width: 184px;
+                overflow: hidden;
+                margin: 20px 0 0 50px;
+                font-size:0;
+
+            }
+            .logo-small:after {
+                content: url(../images/Logo/Arden-Logo-small.svg);
+                max-width: 100%;
+
+
+            }
+
+
+
+        }
+    }
+
+
+
+    .row {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .content-row {
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        flex-wrap:wrap;
+
+    }
+
+    .content-container-block {
+        flex: 1;
+        width: 100%;
+        margin:10px;
+
+    }
+
+    .content-row--no-flex {
+        display: block;
+        margin:10px;
+        width:100%;
+        flex:1;
+    }
+
+    .content-row-centered {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin:10px;
+        flex-direction:column;
+        flex-basis:70%;
+    }
+
+    .content-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 750px;
+        margin: 0 auto;
+        flex-direction:column;
+        flex-basis:70%;
+    }
+
+    .content-column-margin {
+        margin: 45px 0 45px 0;
+    }
+
+
+
+    footer {
+        display:flex;
+        flex-wrap:wrap;
+
+        & p{
+            text-align:center;
+            margin:0 20% 0 20%;
+            padding-top:30px;
+        }
+        background-color: darken($color-grey, 20%);
+        color: $color-white;
+        height: $footer-height;
+        width: 100%;
+        & a:link,
+        a:visited,
+        a:active {
+            color: lighten($color-grey, 20%);
+            transition: all 1s ease-in-out;
+        }
+        & a:hover {
+            color: $color-white;
+        }
+        .currentLink {
+            color: $color-orange;
+        }
+    }
+
+  }
+
+/*tablet*/
+  @media (min-width: 640px) and (max-width: 899px){
+
+    main {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 70%;
+
+    }
+    .container {
+        max-width:125rem;
+        margin:auto;
+
+
+        & a.skip-to-content-link {
+            left: 50%;
+            position: absolute;
+            transform: translateY(-100%);
+            background: $color-orange;
+            height: 40px;
+            top:0;
+            z-index:50;
+            padding: 8px;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+            color: $color-white;
+        }
+        a.skip-to-content-link:focus {
+            transform: translateY(0%);
+            z-index:50000;
+        }
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+        color: $color-blue;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+        & a:hover {
+            color: lighten($color-orange, 10%);
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: $color-grey;
+
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: $text-line-height + .25;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        flex-basis:70%;
+        align-items: center;
+        z-index:10000;
+        position:fixed;
+        top:0;
+        transition:all .5s ease-in-out;
+        &.initial-header {
+            width: 100%;
+            padding: 1rem;
+            height: 100px;
+            background-color:$color-white;
+
+
+            & .logo-large {
+                position: absolute;
+                left:0;
+                height: 65px;
+                width: 245px;
+                overflow: hidden;
+                margin: 20px 0 20px 50px;
+                font-size:0;
+
+
+            }
+            .logo-large:after {
+                content: url(../images/Logo/Arden-Logo-large.svg);
+
+
+
+
+
+            }
+        }
+        &.scroll-header {
+            width: 100%;
+            padding: 1rem;
+            height:75px;
+            background-color:$color-white;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .5);
+            transition:1s all ease-in-out;
+            & .logo-small {
+                position: absolute;
+                left: 0;
+                height: 48px;
+                width: 184px;
+                overflow: hidden;
+                margin: 0 0 0 50px;
+                font-size:0;
+            }
+            .logo-small:after {
+                content: url(../images/Logo/Arden-Logo-small.svg);
+                max-width: 100%;
+
+
+            }
+
+
+
+        }
+    }
+
+    .container {
+        min-height: calc(100vh - 70px);
+    }
+
+    .row {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .content-row {
+        display: flex;
+        margin: 0;
+        flex-flow: row wrap;
+    }
+
+    .content-container-block {
+        flex: 1;
+        width: 100%;
+        margin: 50px;
+        flex-wrap: wrap;
+    }
+
+    .content-row--no-flex {
+        display: block;
+        margin: 0 150px 0 180px;
+    }
+
+    .content-row-centered {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 100px 0 100px 0;
+    }
+
+    .content-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    .content-column-margin {
+        margin: 45px 0 45px 0;
+    }
+
+
+
+    .showme {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    footer {
+        background-color: darken($color-grey, 20%);
+        color: $color-white;
+        height: $footer-height;
+        @include flexCenter;
+        width: 100%;
+        & a:link,
+        a:visited,
+        a:active {
+            color: lighten($color-grey, 20%);
+            transition: all 1s ease-in-out;
+        }
+        & a:hover {
+            color: $color-white;
+        }
+        .currentLink {
+            color: $color-orange;
+        }
+    }
+
+  }
+
+
+/*desktop*/
+  @media (min-width: 900px){
+
+
+    .container {
+        max-width:125rem;
+        margin:auto;
+
+        & a.skip-to-content-link {
+            left: 50%;
+            position: absolute;
+            transform: translateY(-1005);
+            background: $color-orange;
+            height: 40px;
+            top:0;
+            z-index:50;
+            padding: 8px;
+            position: absolute;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+            color: $color-white;
+        }
+        a.skip-to-content-link:focus {
+            transform: translateY(0%);
+            z-index:50000;
+        }
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+        color: $color-blue;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+        & a:hover {
+            color: lighten($color-orange, 10%);
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: $color-grey;
+        font-size: $font-size--medium;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: $text-line-height + .25;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        z-index:10000;
+        position:fixed;
+        top:0;
+        transition:all 1s ease-in-out;
+        &.initial-header {
+            width: 100%;
+            padding: 1rem;
+            height: 100px;
+            background-color:$color-white;
+
+
+            & .logo-large {
+                position: absolute;
+                left:0;
+                height: 65px;
+                width: 245px;
+                overflow: hidden;
+                margin: 20px 0 20px 150px;
+                font-size:0;
+
+
+            }
+            .logo-large:after {
+                content: url(../images/Logo/Arden-Logo-large.svg);
+                max-width:100%;
+
+
+
+            }
+        }
+        &.scroll-header {
+            width: 100%;
+            padding: 1rem;
+            height:75px;
+            background-color:$color-white;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .5);
+            transition:1s all ease-in-out;
+            & .logo-small {
+                position: absolute;
+                left: 0;
+                height: 48px;
+                width: 184px;
+                overflow: hidden;
+                margin: 0 0 0 180px;
+                font-size:0;
+            }
+            .logo-small:after {
+                content: url(../images/Logo/Arden-Logo-small.svg);
+                max-width: 100%;
+
+
+            }
+
+
+
+        }
+    }
+
+
+
+    .row {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .content-row {
+        display: flex;
+        margin: 0 200px 0 200px;
+
+    }
+
+    .content-row--center {
+        display: flex;
+       justify-content:center;
+
+    }
+    .content-row--closer {
+        display: flex;
+        margin: -100px 200px 0 200px;
+
+    }
+
+    .content-row--large-margin{
+        margin: 0 300px 0 300px;
+    }
+
+    .content-container-block {
+        flex: 1;
+        width: 50%;
+        margin: 50px;
+
+    }
+
+    .content-row--no-flex {
+        display: block;
+        margin: 0 150px 0 180px;
+    }
+
+    .content-row--no-flex-spaced {
+        display: block;
+        margin: 75px 150px 0 180px;
+    }
+
+    .content-row-centered {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 100px 0 100px 0;
+    }
+
+    .content-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    .content-column-margin {
+        margin: 45px 0 45px 0;
+
+    }
+
+
+
+    .showme {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    footer {
+        background-color: darken($color-grey, 20%);
+        color: $color-white;
+        height: $footer-height;
+        @include flexCenter;
+        width: 100%;
+        & a:link,
+        a:visited,
+        a:active {
+            color: lighten($color-grey, 20%);
+            transition: all 1s ease-in-out;
+        }
+        & a:hover {
+            color: $color-white;
+        }
+        .currentLink {
+            color: $color-orange;
+        }
+    }
+
+
+  }
+
+
